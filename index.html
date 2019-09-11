@@ -18,9 +18,9 @@
 
 <div class="container-fluid">
     <form action="#">
-        <p class="text-muted">Please Enter city name</p>
-        <input class="col-sm-3 col-md-2 col-lg-2 form-control" placeholder="City Name" type="text" id="location">
-        <button class="col-sm-3 col-md-2 col-lg-2 btn btn-info" type="submit" id="sub" value="Submit">send</button>
+        <p class="text-muted mt-4">Please Enter city name</p>
+        <input class="col-sm-2 col-md-4 col-lg-6 form-control" placeholder="City Name" type="text" id="location">
+        <button class="col-sm-2 col-md-4 col-lg-6 btn btn-info" type="submit" id="sub" value="Submit">send</button>
     </form>
 
 </div>
@@ -28,9 +28,11 @@
 <div id="target" class="container-fluid"></div>
 
 <template id="template">
-    <div id="weather" class="col-sm-3 col-md-4 col-lg-5" style="background-color:lavender;">...</div>
-    <div id="temp"  class="col-sm-3 col-md-4 col-lg-5" style="background-color:lavenderblush;">...</div>
-    <div id="days" >...</div>
+    <img id="iconDay" class="col-sm-1 col-md-1 col-lg-1" >
+    <div id="weather" class="col-sm-2 col-md-4 col-lg-6" style="background-color:lavender;">...</div>
+    <div id="temp"  class="col-sm-2 col-md-4 col-lg-6" style="background-color:lavenderblush;">...</div>
+    <div id="days" class="col-sm-2 col-md-4 col-lg-6" style="background-color:lavender;" >...</div>
+
 </template>
 <script src="js.js">
     // future javascript

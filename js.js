@@ -13,7 +13,7 @@ document.getElementById("sub").addEventListener("click", function () {
     let today = new Date().getDate();
     let clone;
     const target = document.getElementById("target");
-
+    let icons,iconURL;
     // console.log(today);
 
 
@@ -36,9 +36,11 @@ document.getElementById("sub").addEventListener("click", function () {
             for (let i = 0; i < data.list.length; i+=8) {
 
                 let template = document.getElementById("template");
+                let tempIcon = template.content.getElementById("iconDay");
                 let tempWeather = template.content.getElementById("weather");
                 let tempTemp = template.content.getElementById("temp");
                 let tempDays = template.content.getElementById("days");
+
 
                 castTime = data.list[i].dt_txt;// = the total sting from the day and time
 
@@ -50,11 +52,16 @@ document.getElementById("sub").addEventListener("click", function () {
                 temp = data.list[i].main.temp;
                 weather = data.list[i].weather[0].description;
 
-                console.log(temp, days, weather);
+
+                icons = data.list[i].weather[0].icon;
+                iconURL = "http://openweathermap.org/img/wn/" + icons + ".png";
+                tempIcon.src = iconURL;
+
+                console.log(temp, days, weather,icons);
 
                 tempWeather.innerText = weather;
-                tempTemp.innerText = temp;
-                tempDays.innerText = days;
+                tempTemp.innerText = 'Temperature : ' +temp + '°';
+                tempDays.innerText =  'Date : ' +days ;
 
                 console.log(temp);
 
