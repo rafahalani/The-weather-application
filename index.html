@@ -5,25 +5,32 @@
     <title>Current Weather</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,900" rel="stylesheet">
     <link href="css.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 </head>
 <body>
 
 
-<div>
+<div class="container-fluid">
     <form action="#">
-        <p>Please Enter city name</p>
-        <input type="text" id="location">
-        <button type="submit" id="sub" value="Submit">send</button>
+        <p class="text-muted">Please Enter city name</p>
+        <input class="col-sm-3 col-md-2 col-lg-2 form-control" placeholder="City Name" type="text" id="location">
+        <button class="col-sm-3 col-md-2 col-lg-2 btn btn-info" type="submit" id="sub" value="Submit">send</button>
     </form>
 
 </div>
 
-<div id="target"></div>
+<div id="target" class="container-fluid"></div>
 
 <template id="template">
-    <div id="weather">...</div>
-    <div id="temp">...</div>
-    <div id="days">...</div>
+    <div id="weather" class="col-sm-3 col-md-4 col-lg-5" style="background-color:lavender;">...</div>
+    <div id="temp"  class="col-sm-3 col-md-4 col-lg-5" style="background-color:lavenderblush;">...</div>
+    <div id="days" >...</div>
 </template>
 <script src="js.js">
     // future javascript

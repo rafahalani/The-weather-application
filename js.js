@@ -58,6 +58,8 @@ document.getElementById("sub").addEventListener("click", function () {
 
                 console.log(temp);
 
+
+
                 clone = template.content.cloneNode(true);
                 target.appendChild(clone);
             }
