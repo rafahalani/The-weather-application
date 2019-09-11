@@ -5,11 +5,13 @@ document.getElementById("sub").addEventListener("click", function () {
 
 
     var key = '97a6bb5cd72ffb86281b609a15567950';
-    let midnight, midday;
     let temp;
-
+    let weather;
+    let days;
+    let castTime;
+    let day;
     let today = new Date().getDate();
-   // console.log(today);
+    // console.log(today);
 
 
     //const milliseconds = 86400000; //let date = (threehourforecast.dt)*1000;
@@ -30,26 +32,34 @@ document.getElementById("sub").addEventListener("click", function () {
 
             });
 
-            for (let i = 0; i < data.list.length; i++) {
-                let castTime = data.list[i].dt_txt;// = the total sting from the day and time
-                let hours = castTime.substring(11, 13); // to get the part you need from the string
-                // console.log(hours);
-                let days = castTime.substring(8,9)
+            for (let i = 0; i < data.list.length; i += 8) {
 
 
-                if (hours === '00') {
-                    midnight = data.list[i].main.temp;
-                    // console.log(midnight);
+                castTime = data.list[i].dt_txt;// = the total sting from the day and time
+
+                day = castTime.substring(8, 10); // to get the part you need from the string
+
+
+                days = castTime.substring(0, 10)
+
+
+                if ((day >= '01') || (day <= '31')) {
+
+
+                    temp = data.list[i].main.temp;
+                    weather = data.list[i].weather[0].description;
+
+                    console.log(temp, days, weather);
+
+
+
+
                 }
-                if (hours === '2') {
 
-                    midday = data.list[i].main.temp;
-                    //console.log(midday);
-                }
+                document.getElementById("weather").innerHTML = weather;
+                document.getElementById("temp").innerHTML = temp;
+                document.getElementById("days").innerHTML = days;
 
-
-                temp = parseInt((midnight + midday) / 2);
-                console.log(midnight, midday, temp);
 
             }
 
