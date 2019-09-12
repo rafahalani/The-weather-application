@@ -44,10 +44,8 @@ document.getElementById("sub").addEventListener("click", function () {
 
                 castTime = data.list[i].dt_txt;// = the total sting from the day and time
 
-                // day = castTime.substring(8, 10); // to get the part you need from the string
 
-
-                days = castTime.substring(0, 10);
+                days = castTime.substring(0, 10);// to get the part you need from the string
 
                 temp = data.list[i].main.temp;
                 weather = data.list[i].weather[0].description;
