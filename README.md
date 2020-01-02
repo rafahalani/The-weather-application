@@ -1,5 +1,7 @@
 # The weather application
 
+click to try : https://rafahalani.github.io/The-weather-application/index.html
+
 ## Practical Information
 
 * Repository: `ajax-weather-api`
